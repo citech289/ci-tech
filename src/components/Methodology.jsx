@@ -10,19 +10,19 @@ const Methodology = () => {
                 </p>
             </div>
             <div className="flex flex-col md:flex-row justify-evenly items-stretch">
-                <div className="bg-gradient-to-r from-blue-100 to-green-100 shadow-lg rounded-lg p-8 m-4 w-80 text-center transition duration-300 hover:shadow-2xl hover:scale-105 animate-fade-in delay-400">
+                <div className="bg-gradient-to-r from-blue-100 to-green-100 shadow-lg rounded-lg p-8 m-4 w-80 text-center transition duration-200 hover:shadow-2xl hover:scale-105 ">
                     <h3 className="text-3xl font-semibold text-blue-700">Learn</h3>
                     <p className="mt-3 text-gray-600">
                         Project-based learning environment to understand the practical application of theoretical concepts by deeply engaging the students.
                     </p>
                 </div>
-                <div className="bg-gradient-to-r from-blue-100 to-purple-100 shadow-lg rounded-lg p-8 m-4 w-80 text-center transition duration-300 hover:shadow-2xl hover:scale-105 animate-fade-in delay-600">
+                <div className="bg-gradient-to-r from-blue-100 to-purple-100 shadow-lg rounded-lg p-8 m-4 w-80 text-center transition duration-200 hover:shadow-2xl hover:scale-105 ">
                     <h3 className="text-3xl font-semibold text-purple-700">Practice</h3>
                     <p className="mt-3 text-gray-600">
                         Practice through problem-solving and project building can make a student an expert in their field of interest.
                     </p>
                 </div>
-                <div className="bg-gradient-to-r from-blue-100 to-yellow-100 shadow-lg rounded-lg p-8 m-4 w-80 text-center transition duration-300 hover:shadow-2xl hover:scale-105 animate-fade-in delay-800">
+                <div className="bg-gradient-to-r from-blue-100 to-yellow-100 shadow-lg rounded-lg p-8 m-4 w-80 text-center transition duration-200 hover:shadow-2xl hover:scale-105 ">
                     <h3 className="text-3xl font-semibold text-yellow-700">Intern</h3>
                     <p className="mt-3 text-gray-600">
                         Collaborative working environment with industry mentorship to make young talent ready for real-world challenges.

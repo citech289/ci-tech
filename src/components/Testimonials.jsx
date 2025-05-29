@@ -92,7 +92,7 @@ const Testimonials = () => {
 
         <div
           ref={scrollRef}
-          className="flex space-x-4 overflow-x-auto scrollbar-hide w-full"
+          className="flex space-x-4 overflow-x-hidden scrollbar-hide w-full"
         >
           {testimonials.map((testimonial, index) => {
             const isExpanded = expanded[index];

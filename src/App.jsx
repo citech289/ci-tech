@@ -1,5 +1,4 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -13,10 +12,11 @@ import JobOpportunities01 from "./routes/JobOpportunities01";
 import Blogs from "./routes/Blogs";
 import ContactUs from "./routes/ContactUs";
 import SubmitResumeBody from "./routes/SubmitResumeBody";
-import Batches from "./routes/Batches";
 import Methodology from "./components/Methodology";
-import Testimonials from "./components/Testimonials";
-// import Courselist from "./components/Courselist";
+import CEO from "./components/CEO";
+import Training from "./routes/Training";
+import JoinThisCourse from "./routes/JoinThisCourse";
+import CourseDetails from "./components/CourseDetails";
 
 const App = () => {
   return (
@@ -28,19 +28,9 @@ const App = () => {
           element={
             <>
               <Header />
-              {/* <Courselist/> */}
-              <Methodology/>
-              <Testimonials/>
+              <CEO />
+              <Methodology />
               <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/Batches"
-          element={
-            <>
-              <Batches />
-              <Footer/>
             </>
           }
         />
@@ -61,6 +51,26 @@ const App = () => {
         <Route path="/Opportunities" element={<JobOpportunities01 />} />
         <Route path="/Posts" element={<Blogs />} />
         <Route
+          path="/Training"
+          element={
+            <>
+              <Training />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+           path="/course/:slug"
+          element={
+            <>
+              <CourseDetails />
+              <JoinThisCourse />
+              <Footer />
+            </>
+          }
+        />
+        
+        <Route
           path="/ContactUs"
           element={
             <>
@@ -71,11 +81,6 @@ const App = () => {
         />
         <Route path="/Categories" element={<Categories />} />
       </Routes>
-      {/* <Header />
-      <StatsSection />
-      <JobOpportunities />
-      <Projects />
-      <Footer /> */}
     </div>
   );
 };
