@@ -15,8 +15,14 @@ import SubmitResumeBody from "./routes/SubmitResumeBody";
 import Methodology from "./components/Methodology";
 import CEO from "./components/CEO";
 import Training from "./routes/Training";
+// import Roadmap from "./routes/Roadmap";
 import JoinThisCourse from "./routes/JoinThisCourse";
 import CourseDetails from "./components/CourseDetails";
+import Internship from "./routes/Internship";
+import About from "./components/About";
+import Development from "./routes/Development";
+import Staff from "./routes/Staff";
+import Carrer from "./routes/Carrer";
 
 const App = () => {
   return (
@@ -28,7 +34,6 @@ const App = () => {
           element={
             <>
               <Header />
-              <CEO />
               <Methodology />
               <Footer />
             </>
@@ -60,7 +65,75 @@ const App = () => {
           }
         />
         <Route
-           path="/course/:slug"
+          path="/Development"
+          element={
+            <>
+              <Development />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/About"
+          element={
+            <>
+              <About />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/CEO"
+          element={
+            <>
+              <div className="mt-[80px]">
+                <CEO />
+              </div>
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/"
+          element={
+            <>
+              <Internship />
+              <Footer />
+            </>
+          }
+        ></Route>
+
+        <Route
+          path="/Staff"
+          element={
+            <>
+              <Staff />
+              <Footer />
+            </>
+          }
+        ></Route>
+
+        <Route
+          path="/Carrer"
+          element={
+            <>
+              <Carrer />
+              <Footer />
+            </>
+          }
+        ></Route>
+
+        <Route
+          path="/roadmap/:slug"
+          element={
+            <>
+              {/* <Roadmap /> */}
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/course/:slug"
           element={
             <>
               <CourseDetails />
@@ -69,7 +142,7 @@ const App = () => {
             </>
           }
         />
-        
+
         <Route
           path="/ContactUs"
           element={

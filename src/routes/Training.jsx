@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const navItems = [
-  "All",
-  "Analytics",
-  "Business Analytics",
-  "Data Science",
-  "Full Stack",
-  "Devops",
-  "Human Resource Management",
+  { name: "All", slug: "" },
+  { name: "Analytics", slug: "data-analytics" },
+  { name: "Business Analytics", slug: "business-analytics" },
+  { name: "Data Science", slug: "data-science-ai" },
+  { name: "Full Stack", slug: "mern-stack" },
+  { name: "Devops", slug: "devops" },
+  { name: "Human Resource Management", slug: "hr-management" },
 ];
 
 const sections = {
@@ -47,7 +47,7 @@ const sections = {
     },
     {
       title: "BI and Visualization",
-       slug: "bi-visualization",
+      slug: "bi-visualization",
       points: [
         "Create dynamic dashboards and reports",
         "Use DAX for custom calculations",
@@ -82,7 +82,7 @@ const sections = {
   Devops: [
     {
       title: "DevOps",
-            slug: "devops",
+      slug: "devops",
       points: [
         "Automate Builds with Git, Jenkins, and Maven",
         "Use Containers via Docker and Kubernetes",
@@ -101,16 +101,27 @@ const sections = {
 };
 
 const Training = () => {
+  const navigate = useNavigate();
+
+  const handleNavClick = (slug) => {
+    if (slug) {
+      navigate(`/course/${slug}`);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" }); // Or reload all courses view
+    }
+  };
+
   return (
-    <div className="bg-white min-h-screen p-4 mt-25">
+    <div className="bg-white min-h-screen p-4 mt-25 relative z-0">
       {/* Navigation Bar */}
       <div className="flex justify-left gap-4 flex-wrap border border-black rounded-xl p-4 mb-10 w-fit mx-auto">
         {navItems.map((item, index) => (
           <div
             key={index}
+            onClick={() => handleNavClick(item.slug)}
             className="bg-gray-800 px-6 py-3 rounded-full text-center text-blue-500 text-sm font-semibold hover:bg-gray-700 cursor-pointer"
           >
-            {item}
+            {item.name}
           </div>
         ))}
       </div>
@@ -125,19 +136,22 @@ const Training = () => {
               className="relative group border border-black p-4 w-full md:w-[300px] rounded-md overflow-hidden bg-white"
             >
               {/* Blur Overlay with Buttons */}
-              <div className="absolute inset-0 backdrop-blur-sm bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex flex-col items-center justify-center gap-3">
+              {/* <div className="absolute inset-0 backdrop-blur-sm bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex flex-col items-center justify-center gap-3">
                 <Link
                   to={`/course/${card.slug}`}
+                  
                   className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm cursor-pointer"
                 >
                   Course Details
                 </Link>
-                <Link to={`/roadmap/${card.slug}`} className="bg-orange-400 text-white px-4 py-2 rounded hover:bg-orange-500 text-sm cursor-pointer">
+                <Link
+                  to={`/roadmap/${card.slug}`}
+                  className="bg-orange-400 text-white px-4 py-2 rounded hover:bg-orange-500 text-sm cursor-pointer"
+                >
                   Roadmap
                 </Link>
-              </div>
+              </div> */}
 
-              {/* Card Content */}
               <div className="relative z-0">
                 <h3 className="text-lg font-bold mb-2 text-blue-500">
                   {card.title}
@@ -147,6 +161,14 @@ const Training = () => {
                     <li key={i}>{point}</li>
                   ))}
                 </ul>
+                <div className="mt-8 text-gray-500 text-sm">
+                  <Link
+                    to={`/course/${card.slug}`}
+                    className="mt-4 px-4 py-2 bg-[#2e5c84] hover:bg-gradient-to-r from-[#2e5c84] to-orange-500 text-white rounded-md hover:bg-orange-500 transition cursor-pointer"
+                  >
+                    Read More
+                  </Link>
+                </div>
               </div>
             </div>
           ))}

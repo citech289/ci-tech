@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import { Autoplay } from "swiper/modules";
 
 // import required modules
 import { Navigation } from "swiper/modules";
@@ -15,74 +16,75 @@ const Header = () => {
     // >
 
     // </div>
-    <div>
+    <div className="">
       {/* <img
-        src="/Final Logo.jpg"
+        src="/powerbi.png"
         alt="Banner"
         className="w-full h-full object-contain lg:mt-5 mt-20"
       /> */}
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper ">
+      <Swiper
+        navigation={true}
+        modules={[Navigation, Autoplay]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false, // Allows autoplay even after user interaction
+        }}
+        className="mySwiper "
+      >
         <SwiperSlide>
           <img
-            src="/All.png"
-            alt="Banner"
-            className="w-full h-full object-contain lg:mt-5 mt-20"
+            src="powerbi.png"
+            className="w-full h-full object-contain lg:mt-5 mt-17"
+            alt="Data Science Banner"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="Data-Science.png"
-            className="w-full h-full object-contain lg:mt-5 mt-20"
-            alt="Banner"
+            src="HR.png"
+            className="w-full h-full object-contain lg:mt-5 mt-17"
+            alt="Java Full Stack Banner"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="Java-Full01.png"
-            className="w-full h-full object-contain lg:mt-5 mt-20"
-            alt="Banner"
+            src="Business Analyst.png"
+            className="w-full h-full object-contain lg:mt-5 mt-17"
+            alt="Business Analyst Banner"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="BA.png"
-            className="w-full h-full object-contain lg:mt-5 mt-20"
-            alt="Banner"
+            src="Data Analyst Banner.png"
+            className="w-full h-full object-contain lg:mt-5 mt-17"
+            alt="Data Analyst Banner"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="DA.png"
-            className="w-full h-full object-contain lg:mt-5 mt-20"
-            alt="Banner"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="DEVOPS.png"
-            className="w-full h-full object-contain lg:mt-5 mt-20"
-            alt="Banner"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="DS.png"
-            className="w-full h-full object-contain lg:mt-5 mt-20"
+            src="Devops.png"
+            className="w-full h-full object-contain lg:mt-5 mt-17"
             alt="Banner"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="JAVA.png"
-            className="w-full h-full object-contain lg:mt-5 mt-20"
-            alt="Banner"
+            src="Data Science.png"
+            className="w-full h-full object-contain lg:mt-5 mt-17"
+            alt="Data-Science"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="MERN.png"
-            className="w-full h-full object-contain lg:mt-5 mt-20"
-            alt="Banner"
+            src="Java-Full-Stack.png"
+            className="w-full h-full object-contain lg:mt-5 mt-17"
+            alt="Java Full Stack Banner"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="MERN stack Banner.png"
+            className="w-full h-full object-contain lg:mt-5 mt-17"
+            alt="MERN Stack Banner"
           />
         </SwiperSlide>
       </Swiper>

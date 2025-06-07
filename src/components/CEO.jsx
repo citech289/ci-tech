@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import ceoImage from "../assets/Sunit-Chaudhuri.jpg";
 import { ImWhatsapp } from "react-icons/im";
-import { CiLinkedin } from "react-icons/ci";
-import { CiPhone } from "react-icons/ci";
+import { CiLinkedin, CiPhone } from "react-icons/ci";
 
-const CEO = () => {
+const MessageFromCEO = () => {
+  const [showMore, setShowMore] = useState(false);
+
   return (
-    <div className="bg-white max-w-8xl mx-auto px-4 py-12">
+    <div className="bg-white max-w-8xl mx-auto px-4 py-12 -m-10">
       <div className="bg-white mt-4 border border-gray-300 rounded-md p-6 shadow-sm">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
           <div className="text-center lg:text-left">
@@ -22,9 +23,7 @@ const CEO = () => {
           </div>
 
           <div className="text-gray-800 text-lg leading-relaxed">
-            {/* <h2 className="text-2xl font-semibold mb-4">
-              Message from the CEO
-            </h2> */}
+            {/* First 7 Paragraphs */}
             <p className="mb-4">
               "As the CEO, I want to personally welcome you to our organization.
               Your unique perspectives and skills will be instrumental to our
@@ -50,9 +49,10 @@ const CEO = () => {
             </p>
             <p className="mb-4">
               Our curriculum covers key technologies like Java, MERN Stack,
-              Python, Web Development, Analytics, and Data Science with AI and Human Resources. We
-              are involved in Software Development, Research, and Training with
-              many partners, and we also operate in the staffing domain.
+              Python, Web Development, Analytics, and Data Science with AI and
+              Human Resources. We are involved in Software Development,
+              Research, and Training with many partners, and we also operate in
+              the staffing domain.
             </p>
             <p className="mb-4">
               In the end, I want to clearly say that I aim to eliminate
@@ -65,33 +65,45 @@ const CEO = () => {
               stay up-to-date with the latest technologies, you will find great
               job opportunities. So keep learning, keep growing.
             </p>
-            <p className="mb-4">Chief Executive Officer(CEO)</p>
-            <p className="mb-4 font-medium">
-              CI-STEM INFORMATION TECHNOLOGY SERVICES PRIVATE LIMITED
-            </p>
-            <p className="mb-4 font-medium">
-              GN 38/5, ANAYA CHAMBERS,9TH FLOOR, Sector V, Salt lake
-              City, Kolkata, West Bengal 700091
-            </p>
-            <p className="mb-2 font-medium flex items-center">
-              <CiPhone className=" text-2xl mr-2 text-blue-700" /> 8910363873
-            </p>
-            <p className="mb-2 flex items-center">
-              {" "}
-              <ImWhatsapp className="mr-2 text-green-500 text-xl" />
-              8334001667
-            </p>
-            <p className="mb-2 flex items-center">
-              {" "}
-              <CiLinkedin className="mr-2 text-blue-800 text-2xl" />
-              <a
-                href="https://www.linkedin.com/in/sunitchaudhuri/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Linkedin
-              </a>
-            </p>
+
+            {showMore && (
+              <>
+                <p className="mb-4">Chief Executive Officer(CEO)</p>
+                <p className="mb-4 font-medium">
+                  CI-STEM INFORMATION TECHNOLOGY SERVICES PRIVATE LIMITED
+                </p>
+                <p className="mb-4 font-medium">
+                  GN 38/5, ANAYA CHAMBERS,9TH FLOOR, Sector V, Salt lake City,
+                  Kolkata, West Bengal 700091
+                </p>
+                <p className="mb-2 font-medium flex items-center">
+                  <CiPhone className=" text-2xl mr-2 text-blue-700" />{" "}
+                  8910363873
+                </p>
+                <p className="mb-2 flex items-center">
+                  <ImWhatsapp className="mr-2 text-green-500 text-xl" />
+                  8334001667
+                </p>
+                <p className="mb-2 flex items-center">
+                  <CiLinkedin className="mr-2 text-blue-800 text-2xl" />
+                  <a
+                    href="https://www.linkedin.com/in/sunitchaudhuri/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Linkedin
+                  </a>
+                </p>
+              </>
+            )}
+
+            {/* Toggle Button */}
+            <button
+              onClick={() => setShowMore(!showMore)}
+              className="mt-4 px-4 py-2 bg-[#2e5c84] text-white rounded-md hover:bg-gradient-to-r from-[#2e5c84] to-orange-500 transition cursor-pointer"
+            >
+              {showMore ? "Read Less" : "Read More"}
+            </button>
           </div>
         </div>
       </div>
@@ -99,4 +111,4 @@ const CEO = () => {
   );
 };
 
-export default CEO;
+export default MessageFromCEO;

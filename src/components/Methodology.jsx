@@ -28,6 +28,13 @@ const Methodology = () => {
                         Collaborative working environment with industry mentorship to make young talent ready for real-world challenges.
                     </p>
                 </div>
+
+                <div className="bg-gradient-to-r from-green-100 to-red-100 shadow-lg rounded-lg p-8 m-4 w-80 text-center transition duration-200 hover:shadow-2xl hover:scale-105 ">
+                    <h3 className="text-3xl font-semibold text-orange-600">Employment</h3>
+                    <p className="mt-3 text-gray-600">
+                        A collaborative work environment guided by experienced industry mentors, focused on equipping young professionals with the practical skills and knowledge required to excel in real-world challenges.
+                    </p>
+                </div>
             </div>
         </section>
     );
