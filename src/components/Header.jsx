@@ -47,7 +47,7 @@ const Header = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="HR.png"
+            src="Human-R.png"
             className="w-full h-full object-contain lg:mt-5 mt-17"
             alt="Java Full Stack Banner"
           />
@@ -68,14 +68,14 @@ const Header = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="Devops.png"
+            src="Dev-Ops.png"
             className="w-full h-full object-contain lg:mt-5 mt-17"
             alt="Banner"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="Data-Science.png"
+            src="DataScience.png"
             className="w-full h-full object-contain lg:mt-5 mt-17"
             alt="Data-Science"
           />
