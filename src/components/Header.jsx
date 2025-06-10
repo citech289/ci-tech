@@ -33,7 +33,14 @@ const Header = () => {
       >
         <SwiperSlide>
           <img
-            src="powerbi.png"
+            src="BI.png"
+            className="w-full h-full object-contain lg:mt-5 mt-17"
+            alt="Data Science Banner"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="All Banners.png"
             className="w-full h-full object-contain lg:mt-5 mt-17"
             alt="Data Science Banner"
           />
@@ -47,14 +54,14 @@ const Header = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="Business Analyst.png"
+            src="Busniness-Analytics.png"
             className="w-full h-full object-contain lg:mt-5 mt-17"
             alt="Business Analyst Banner"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="Data Analyst Banner.png"
+            src="Data-Analyst.png"
             className="w-full h-full object-contain lg:mt-5 mt-17"
             alt="Data Analyst Banner"
           />
@@ -68,25 +75,25 @@ const Header = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="Data Science.png"
+            src="Data-Science.png"
             className="w-full h-full object-contain lg:mt-5 mt-17"
             alt="Data-Science"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="Java-Full-Stack.png"
+            src="Java-FSD.png"
             className="w-full h-full object-contain lg:mt-5 mt-17"
             alt="Java Full Stack Banner"
           />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <img
             src="MERN stack Banner.png"
             className="w-full h-full object-contain lg:mt-5 mt-17"
             alt="MERN Stack Banner"
           />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
       
     </div>

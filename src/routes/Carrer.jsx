@@ -4,7 +4,7 @@ const Carrer = () => {
   return (
     <div className="mt-20 bg-white text-black text-left px-4 py-8 sm:px-6 md:px-10 lg:px-16">
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-500 mb-4">
-        Carrer Program
+        Career Program
       </h1>
       <h2 className="text-lg sm:text-xl md:text-2xl font-medium mt-0 text-[#2e5c84]">
         Coming Soon...

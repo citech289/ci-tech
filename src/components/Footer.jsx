@@ -8,7 +8,7 @@ const Footer = () => {
     {
       title: "Quick Links",
       links: [
-        { name: "About Us", url: "#" },
+        { name: "About Us", url: "https://citechspl.com/About" },
         { name: "Staffing", url: "#" },
         { name: "Training", url: "#" },
         { name: "Development", url: "#" },
@@ -52,11 +52,12 @@ const Footer = () => {
             alt="companylogo"
           />
           <p className="max-w-[410px] mt-6">
-            <b>Company:</b> Ci-STEM Information Technology Services Private Limited
+            <b>Company:</b> Ci-STEM Information Technology Services
+            Private Limited
           </p>
           <p className="max-w-[410px] mt-6">
-             GN-38/5, ANAYA CHAMBERS, 9TH FLOOR, SALT LAKE,
-            SECTOR-5, KOLKATA-700091
+            9th floor, Anaya Chambers, GN 38/5, GN Block, Sector V, Bidhannagar,
+            Kolkata, West Bengal 700091
           </p>
         </div>
         <div className="flex flex-wrap justify-between w-full md:w-[45%] gap-5">

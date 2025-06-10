@@ -113,8 +113,8 @@ export default function ContactForm() {
             <div>
               <p className="font-medium">Office Address</p>
               <p className="text-sm text-gray-600">
-                GN-38/5, ANAYA CHAMBERS, 9TH FLOOR, <br />
-                SALT LAKE, SECTOR-5, KOLKATA-700091
+                9th floor, Anaya Chambers, GN 38/5, GN Block, <br />
+                Sector V, Bidhannagar, Kolkata, West Bengal 700091
               </p>
             </div>
           </div>
@@ -167,14 +167,14 @@ export default function ContactForm() {
             ></iframe>
           </a> */}
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.148959889716!2d88.4331189!3d22.5735314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027521dc3343b3%3A0xc284fe2034017de9!2sCI-STEM%20INFORMATION%20TECHNOLOGY%20SERVICES%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1749107104966!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2204.284145267731!2d88.4279388561845!3d22.57159557231358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02753c09b3d761%3A0x3bd4a468664195cf!2sEasy%20Daftar!5e1!3m2!1sen!2sin!4v1749451982055!5m2!1sen!2sin"
             width="100%"
             height="300"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="TechVista Solutions Office Location"
+            title="Ci-tech Office Location"
             className="w-full h-72 rounded-md"
           />
         </div>

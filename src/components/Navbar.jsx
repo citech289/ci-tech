@@ -28,7 +28,7 @@ const Navbar = () => {
   }, [showMobileMenu]);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-6 bg-[#2e5c84] shadow-md   items-center mt-0 ">
+    <div className="fixed top-0 left-0 w-full z-6 bg-white shadow-md   items-center mt-0 ">
       {/* <div className="container mx-auto flex flex-wrap md:flex-nowrap items-center justify-between px-4 py-2 md:px-10"> */}
 
       {/* <div className="flex items-center "> */}
@@ -39,14 +39,14 @@ const Navbar = () => {
           className="h-12 md:h-16 w-auto cursor-pointer rounded-md mt-2 mb-2 ml-4"
         />
       </Link>
-      <h2 className="hidden text-white md:block text-base md:text-4xl font-medium  text-center w-full -mt-17">
+      <h2 className="hidden text-[#2e5c84] md:block text-base md:text-4xl font-medium  text-center w-full -mt-17">
         Ci-STEM Information Technology Services Private Limited
       </h2>
       {/* </div> */}
 
       {/* Second Line: Navigation */}
       {/* <div className="hidden md:flex flex-grow justify-center"> */}
-      <ul className="hidden md:flex flex-wrap items-center justify-center gap-x-6 text-white whitespace-nowrap mt-1">
+      <ul className="hidden md:flex flex-wrap items-center justify-center gap-x-8 text-[#2e5c84] whitespace-nowrap mt-1">
         <li className="relative group">
           <Link
             to="/About"
@@ -211,14 +211,14 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <li>
+        {/* <li>
           <Link
             to="/"
             className="cursor-pointer px-4 bg-transparent hover:text-gray-300  flex items-center gap-1"
           >
             <FaPhoneAlt className="hover:text-gray-300 " /> +918910363873
           </Link>
-        </li>
+        </li> */}
       </ul>
       {/* </div> */}
 
