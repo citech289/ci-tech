@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { assets } from "../assets/assets";
-import { IoMdArrowDropdown } from "react-icons/io";
+import { useEffect, useState } from "react";
 import {
-  FaHome,
   FaBook,
   FaCalendarAlt,
-  FaUsers,
   FaMapMarkerAlt,
-  FaClipboardList,
-  FaPenSquare,
-  FaPhoneAlt,
+  FaPenSquare
 } from "react-icons/fa";
+import { IoMdArrowDropdown } from "react-icons/io";
+import { Link } from "react-router-dom";
+import { assets } from "../assets/assets";
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -29,9 +25,6 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full z-6 bg-white shadow-md   items-center mt-0 ">
-      {/* <div className="container mx-auto flex flex-wrap md:flex-nowrap items-center justify-between px-4 py-2 md:px-10"> */}
-
-      {/* <div className="flex items-center "> */}
       <Link to="/" className="flex-shrink-0">
         <img
           src="Ci-stem.svg"
@@ -40,12 +33,9 @@ const Navbar = () => {
         />
       </Link>
       <h2 className="hidden text-[#2e5c84] md:block text-base md:text-4xl font-medium  text-center w-full -mt-17">
-        Ci-STEM Information Technology Services Private Limited
+        Ci-STEM Information Technology Services Private Limited
       </h2>
-      {/* </div> */}
 
-      {/* Second Line: Navigation */}
-      {/* <div className="hidden md:flex flex-grow justify-center"> */}
       <ul className="hidden md:flex flex-wrap items-center justify-center gap-x-8 text-[#2e5c84] whitespace-nowrap mt-1">
         <li className="relative group">
           <Link
@@ -59,9 +49,6 @@ const Navbar = () => {
             <Link to="/About" className="block px-4 py-2 hover:bg-gray-100">
               Company
             </Link>
-            {/* <Link to="/" className="block px-4 py-2 hover:bg-gray-100">
-              Leadership
-            </Link> */}
             <div className="relative group/leadership">
               <Link
                 to="/"
@@ -70,8 +57,6 @@ const Navbar = () => {
                 Leadership
                 <IoMdArrowDropdown className="ml-2" />
               </Link>
-
-              {/* Nested Dropdown */}
               <div className="absolute left-full top-0 ml-1 transform transition-all hidden group-hover/leadership:block bg-white shadow-md rounded p-2 w-40">
                 <Link to="/CEO" className="block px-4 py-2 hover:bg-gray-100">
                   CEO
@@ -81,7 +66,6 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-
             <Link to="/" className="block px-4 py-2 hover:bg-gray-100">
               Events
             </Link>
@@ -98,7 +82,7 @@ const Navbar = () => {
         </li>
         <li className="relative group">
           <Link
-            to="/Development"
+            to="/"
             className="cursor-pointer hover:text-gray-300 flex items-center gap-1"
           >
             <FaBook /> Development
@@ -106,25 +90,25 @@ const Navbar = () => {
           </Link>
           <div className="absolute top-4.5 left-0 mt-2 hidden group-hover:block bg-white text-black shadow-md rounded p-2 z-50 transition duration-300">
             <Link
-              to="/Development"
+              to="/BlockchainDevelopment"
               className="block px-4 py-2 hover:bg-gray-100"
             >
               Blockchain Development
             </Link>
             <Link
-              to="/Development"
+              to="/WebDevelopment"
               className="block px-4 py-2 hover:bg-gray-100"
             >
               Web Development
             </Link>
             <Link
-              to="/Development"
+              to="/MobileDevelopment"
               className="block px-4 py-2 hover:bg-gray-100"
             >
               Mobile Development
             </Link>
             <Link
-              to="/Development"
+              to="/DigitalMarketing"
               className="block px-4 py-2 hover:bg-gray-100"
             >
               Digital Marketing
@@ -139,7 +123,6 @@ const Navbar = () => {
             <FaBook /> Internship
             <IoMdArrowDropdown className="inline-block ml-1 group-hover:rotate-180 duration-200 text-2xl" />
           </Link>
-
           <div className="absolute top-full left-0 mt-0 hidden group-hover:grid grid-cols-2 gap-2 bg-white text-black shadow-md rounded-md p-4 z-50 w-[500px]">
             <Link to="/" className="block px-3 py-2 hover:bg-gray-100 rounded">
               Blockchain Development
@@ -196,7 +179,7 @@ const Navbar = () => {
         <li>
           <Link
             to="/Carrer"
-            className="cursor-pointer hover:text-gray-300  flex items-center gap-1"
+            className="cursor-pointer hover:text-gray-300 flex items-center gap-1"
           >
             <FaPenSquare /> Career
           </Link>
@@ -205,33 +188,20 @@ const Navbar = () => {
         <li>
           <Link
             to="/ContactUs"
-            className="cursor-pointer hover:text-gray-300  flex items-center gap-1"
+            className="cursor-pointer hover:text-gray-300 flex items-center gap-1"
           >
             <FaMapMarkerAlt /> Contact Us
           </Link>
         </li>
-
-        {/* <li>
-          <Link
-            to="/"
-            className="cursor-pointer px-4 bg-transparent hover:text-gray-300  flex items-center gap-1"
-          >
-            <FaPhoneAlt className="hover:text-gray-300 " /> +918910363873
-          </Link>
-        </li> */}
       </ul>
-      {/* </div> */}
 
-      {/* Mobile Menu Icon */}
       <img
         onClick={() => setShowMobileMenu(true)}
         src={assets.menu_icon}
         className="md:hidden w-7 cursor-pointer filter invert absolute top-6 right-6"
         alt="menu"
       />
-      {/* </div> */}
 
-      {/* Mobile Menu */}
       <div
         className={`md:hidden ${
           showMobileMenu ? "fixed w-70" : "h-0 w-0"
@@ -263,15 +233,14 @@ const Navbar = () => {
           </Link>
           <Link
             onClick={() => setShowMobileMenu(false)}
-            to="/"
+            to="/Staff"
             className="px-4 py-2"
           >
             Staffing
           </Link>
-
           <Link
             onClick={() => setShowMobileMenu(false)}
-            to="/"
+            to="/Development"
             className="px-4 py-2"
           >
             Development
@@ -285,7 +254,7 @@ const Navbar = () => {
           </Link>
           <Link
             onClick={() => setShowMobileMenu(false)}
-            href="#"
+            to="/Carrer"
             className="px-4 py-2"
           >
             Career

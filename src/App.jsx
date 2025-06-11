@@ -1,28 +1,30 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+import { Route, Routes } from "react-router-dom";
+import About from "./components/About";
+import CEO from "./components/CEO";
+import CourseDetails from "./components/CourseDetails";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Methodology from "./components/Methodology";
 import Navbar from "./components/Navbar";
+import BlockchainDevelopment from "./routes/BlockchainDevelopment";
+import Blogs from "./routes/Blogs";
+import Carrer from "./routes/Carrer";
+import Categories from "./routes/Categories";
 import Company from "./routes/Company";
+import ContactUs from "./routes/ContactUs";
+import DigitalMarketing from "./routes/DigitalMarketing";
+import Internship from "./routes/Internship";
+import JobOpportunities01 from "./routes/JobOpportunities01";
+import JoinThisCourse from "./routes/JoinThisCourse";
 import LeaderShip from "./routes/LeaderShip";
+import MobileDevelopment from "./routes/MobileDevelopment";
+import ServiceOffer from "./routes/ServiceOffer";
+import Staff from "./routes/Staff";
 import SubmitRequirement from "./routes/SubmitRequirement";
 import SubmitResume from "./routes/SubmitResume";
-import Categories from "./routes/Categories";
-import ServiceOffer from "./routes/ServiceOffer";
-import JobOpportunities01 from "./routes/JobOpportunities01";
-import Blogs from "./routes/Blogs";
-import ContactUs from "./routes/ContactUs";
 import SubmitResumeBody from "./routes/SubmitResumeBody";
-import Methodology from "./components/Methodology";
-import CEO from "./components/CEO";
 import Training from "./routes/Training";
-// import Roadmap from "./routes/Roadmap";
-import JoinThisCourse from "./routes/JoinThisCourse";
-import CourseDetails from "./components/CourseDetails";
-import Internship from "./routes/Internship";
-import About from "./components/About";
-import Development from "./routes/Development";
-import Staff from "./routes/Staff";
-import Carrer from "./routes/Carrer";
+import WebDevelopment from "./routes/WebDevelopment";
 
 const App = () => {
   return (
@@ -64,11 +66,47 @@ const App = () => {
             </>
           }
         />
-        <Route
+        {/* <Route
           path="/Development"
           element={
             <>
               <Development />
+              <Footer />
+            </>
+          }
+        /> */}
+        <Route
+          path="/BlockchainDevelopment"
+          element={
+            <>
+              <BlockchainDevelopment />
+              <Footer />
+            </>
+          }
+        />
+         <Route
+          path="/WebDevelopment"
+          element={
+            <>
+              <WebDevelopment />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/MobileDevelopment"
+          element={
+            <>
+              <MobileDevelopment />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/DigitalMarketing"
+          element={
+            <>
+              <DigitalMarketing />
               <Footer />
             </>
           }
@@ -94,15 +132,14 @@ const App = () => {
           }
         />
         <Route
-          path="/"
+          path="/Internship"
           element={
             <>
               <Internship />
               <Footer />
             </>
           }
-        ></Route>
-
+        />
         <Route
           path="/Staff"
           element={
@@ -111,8 +148,7 @@ const App = () => {
               <Footer />
             </>
           }
-        ></Route>
-
+        />
         <Route
           path="/Carrer"
           element={
@@ -121,13 +157,11 @@ const App = () => {
               <Footer />
             </>
           }
-        ></Route>
-
+        />
         <Route
           path="/roadmap/:slug"
           element={
             <>
-              {/* <Roadmap /> */}
               <Footer />
             </>
           }
@@ -142,7 +176,6 @@ const App = () => {
             </>
           }
         />
-
         <Route
           path="/ContactUs"
           element={
